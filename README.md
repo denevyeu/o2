@@ -1,7 +1,3 @@
-# o2
-
-=======
-
 # Vite React Contact Form
 
 Tento projekt je **jednoduchý formulár** na kontaktné údaje (telefón, e-mail) postavený na **Reacte** a **Vite** s použitím **TypeScriptu** a **SCSS**.
