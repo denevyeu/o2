@@ -1,0 +1,42 @@
+@use "../../styles/variables" as vars;
+@use "sass:color";
+
+.btn {
+  width: 50%;
+  height: vars.$dimension-5xl;
+  font-family: vars.$font-family-default;
+  font-size: vars.$font-size-label-m;
+  font-weight: 600;
+  border: none;
+  border-radius: vars.$dimension-radius-input;
+  cursor: pointer;
+  padding: vars.$dimension-s vars.$dimension-m;
+  transition: background-color 0.2s, opacity 0.2s;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &--primary {
+    background-color: vars.$color-surface-brand;
+    color: vars.$color-surface-x-high;
+
+    &:hover:not(:disabled) {
+      background-color: color.scale(
+        vars.$color-surface-brand,
+        $lightness: -10%
+      );
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: vars.$color-surface-brand;
+    border: 1px solid vars.$color-surface-brand;
+
+    &:hover:not(:disabled) {
+      text-decoration: underline;
+    }
+  }
+}

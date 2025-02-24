@@ -1,0 +1,7 @@
+@use "../../styles/variables" as vars;
+
+.error-message {
+  margin-top: 4px;
+  font-size: 12px;
+  color: vars.$color-surface-danger;
+}

@@ -1,0 +1,22 @@
+@use "./styles/variables" as vars;
+
+.app-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.app-title {
+  font-family: vars.$font-family-default;
+  font-size: 32px;
+  font-weight: 700;
+  color: vars.$color-content-on-neutral-xx-high;
+  margin-bottom: 8px;
+}
+
+.app-subtitle {
+  font-family: vars.$font-family-default;
+  font-size: 16px;
+  color: vars.$color-content-on-neutral-medium;
+  margin-bottom: 32px;
+}

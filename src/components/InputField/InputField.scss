@@ -1,0 +1,57 @@
+@use "../../styles/variables" as vars;
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: vars.$dimension-m;
+
+  &__label {
+    margin-bottom: 4px;
+    font-family: vars.$font-label-m-family;
+    font-size: vars.$font-label-m-size;
+    font-weight: vars.$font-label-m-weight;
+    line-height: vars.$font-label-m-line-height;
+    letter-spacing: vars.$font-label-m-letter-spc;
+    color: vars.$color-content-on-neutral-xx-high;
+  }
+
+  &__input {
+    max-width: 100%;
+    height: vars.$dimension-5xl;
+    min-height: vars.$dimension-5xl;
+    border: 1px solid vars.$color-content-on-neutral-medium;
+    border-radius: vars.$dimension-radius-input;
+    padding-top: vars.$dimension-s;
+    padding-right: vars.$dimension-xs;
+    padding-bottom: vars.$dimension-s;
+    padding-left: vars.$dimension-m;
+    background-color: vars.$color-surface-x-low;
+    font-family: vars.$font-family-default;
+    font-size: vars.$font-size-body-m;
+    line-height: vars.$line-height-body-m;
+    color: vars.$color-content-on-neutral-xx-high;
+    caret-color: vars.$color-surface-brand;
+    outline: none;
+
+    &::placeholder {
+      color: vars.$color-content-on-neutral-low;
+    }
+
+    &:focus {
+      border-color: #464650;
+      border-width: 2px;
+      outline: none;
+    }
+
+    &.error {
+      border-color: vars.$color-surface-danger;
+      background-color: vars.$color-surface-danger-variant;
+    }
+
+    &:disabled {
+      background-color: vars.$color-surface-x-low;
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}

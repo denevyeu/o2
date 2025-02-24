@@ -1,0 +1,45 @@
+@use "../../styles/variables" as vars;
+@use "sass:color";
+
+.contact-form {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+
+  &__title {
+    font-family: vars.$font-family-default;
+    font-size: 32px;
+    font-weight: 700;
+    color: vars.$color-content-on-neutral-xx-high;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-family: vars.$font-family-default;
+    font-size: 16px;
+    color: vars.$color-content-on-neutral-medium;
+    margin-bottom: vars.$dimension-m;
+  }
+
+  &__description {
+    border-top: 1px solid vars.$color-content-on-neutral-low;
+    margin: vars.$dimension-xl 0 vars.$dimension-l;
+    padding-top: vars.$dimension-l;
+    font-family: vars.$font-family-default;
+    font-size: vars.$font-size-body-m;
+    line-height: vars.$line-height-body-m;
+    color: vars.$color-content-on-neutral-medium;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: vars.$dimension-s;
+    margin-top: vars.$dimension-m;
+  }
+
+  &__lower_part {
+    background-color: color.scale(vars.$color-surface-brand, $lightness: 95%);
+    border-radius: vars.$dimension-radius-input;
+    padding: vars.$dimension-l;
+  }
+}
